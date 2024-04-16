@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-03 14:04:52.561472",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "overtime_request",
+  "overtime_hours",
+  "is_holiday"
+ ],
+ "fields": [
+  {
+   "fieldname": "overtime_request",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Overtime Request",
+   "options": "Overtime Request",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "overtime_request.overtime_hours",
+   "fieldname": "overtime_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overtime Hours",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_holiday",
+   "fieldtype": "Check",
+   "label": "Is Holiday",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-03 15:54:47.694001",
+ "modified_by": "Administrator",
+ "module": "Payroll Overtime",
+ "name": "Salary Slip Overtime",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -4,8 +4,14 @@ app_publisher = "EBX Technolgies"
 app_description = "Overtime Feature for Payroll Module"
 app_email = "osama.ereksosi@gmail.com"
 app_license = "mit"
-# required_apps = []
+required_apps = ["hrms"]
 
+fixtures = [
+    {"dt": "Custom Field", "filters": {"module": "Payroll Overtime"}},
+    {"dt": "Salary Component", "filters": {"name": "Overtime Example"}},
+    {"dt": "Role", "filters": {"name": "Overtime Approver"}}
+    
+]
 # Includes in <head>
 # ------------------
 
@@ -114,9 +120,9 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Salary Slip": "payroll_overtime.overrides.salary_slip.POSalarySlip"
+}
 
 # Document Events
 # ---------------

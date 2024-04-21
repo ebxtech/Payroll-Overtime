@@ -9,9 +9,12 @@ required_apps = ["hrms"]
 fixtures = [
     {"dt": "Custom Field", "filters": {"module": "Payroll Overtime"}},
     {"dt": "Salary Component", "filters": {"name": "Overtime Example"}},
-    {"dt": "Role", "filters": {"name": "Overtime Approver"}}
-    
+    {"dt": "Role", "filters": {"name": "Overtime Approver"}},
+    {"dt": "DocType Link", "filters": {"custom": 1}}
 ]
+
+after_app_install = "payroll_overtime.setup.after_app_install"
+before_app_uninstall = "payroll_overtime.setup.before_app_uninstall"
 # Includes in <head>
 # ------------------
 

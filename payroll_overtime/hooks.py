@@ -13,8 +13,8 @@ fixtures = [
     {"dt": "DocType Link", "filters": {"custom": 1}}
 ]
 
-after_app_install = "payroll_overtime.setup.after_app_install"
-before_app_uninstall = "payroll_overtime.setup.before_app_uninstall"
+after_app_install = "payroll_overtime.setup.after_install"
+before_app_uninstall = "payroll_overtime.setup.before_uninstall"
 # Includes in <head>
 # ------------------
 
